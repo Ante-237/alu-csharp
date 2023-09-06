@@ -42,24 +42,11 @@ class Program{
             for(int i = 0; i < count ; i ++){
 
                 if( i == count - 1){
-                      Console.Write($"{CurrentNumbers[i]}");
+                      Console.WriteLine($"{CurrentNumbers[i]}");
                 }else{
                  
                       Console.Write($"{CurrentNumbers[i]:D2}, ");
-                }
-
-               
+                }             
             }
         }
 }
-
-   
-
-
-            /*
-            if(i == 99){
-                Console.Write($"{i}");
-            }else{
-                Console.Write($"{i:D2}, ");
-            }
-            */
