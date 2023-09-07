@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-PROJECT_DIR="0-new_project"
-dotnet new console -n "$PROJECT_DIR"
+dotnet new console -n 0-new_project
 
