@@ -22,7 +22,7 @@ class List{
            //         Console.WriteLine("Printing the cache list elements " + temp);
            // }
 
-            return myList;
+            return CacheList;
         }else{
             Console.WriteLine("Index is out of range");
             return myList;
