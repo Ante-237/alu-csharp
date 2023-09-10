@@ -7,7 +7,6 @@ class LList{
         foreach(int value in myList){
             count++;
         }
-
         return count;
     }
 }
