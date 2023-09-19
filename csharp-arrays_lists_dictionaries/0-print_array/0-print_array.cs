@@ -14,7 +14,13 @@ class Array{
         int[] NumberList = new int[size];
         for(int i = 0; i < size; i ++){
             NumberList[i] = i;
-            Console.Write($"{i} ");
+            if(i < size - 1){
+                Console.Write($"{i} ");
+            }else{
+                Console.Write($"{i}");
+            }
+         
+
         }
         Console.WriteLine();
 
