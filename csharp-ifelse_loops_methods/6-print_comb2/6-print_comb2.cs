@@ -40,11 +40,9 @@ class Program{
 
             int count = CurrentNumbers.Count;
             for(int i = 0; i < count ; i ++){
-
                 if( i == count - 1){
                       Console.WriteLine($"{CurrentNumbers[i]}");
-                }else{
-                 
+                }else{                
                       Console.Write($"{CurrentNumbers[i]:D2}, ");
                 }             
             }
