@@ -2,7 +2,7 @@
 
 class Program
 {
-    public void Main(string[] args)
+    public static void Main(string[] args)
     {
         Random rndm = new Random();
         int number = rndm.Next(-10000, 10000);
