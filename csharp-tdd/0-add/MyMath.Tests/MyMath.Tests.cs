@@ -17,6 +17,9 @@ namespace Tests{
             _myMath = new Operations();
         }
 
+        /// <summary>
+        /// Test if addition of two numbers is 4
+        /// </summary>
         [Test]
         public void AdditionOperation()
         {
