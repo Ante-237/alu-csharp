@@ -1,22 +1,33 @@
-using MyMath;
 using NUnit.Framework;
+using MyMath;
 
 
-namespace MyMath.Tests{
-public class Tests
-{
-    [SetUp]
-    public void Setup()
+
+namespace Tests{
+
+
+    [TestFixture]
+    public class Test_NumberAddition
     {
-       
-    }
+        private Operations _myMath;
 
-    [Test]
-    public void AdditionOperation()
-    {
-        Assert.IsTrue()
+        [SetUp]
+        public void Setup()
+        {
+            _myMath = new Operations();
+        }
+
+        [Test]
+        public void AdditionOperation()
+        {
+            bool state = false;
+          if((Operations.Add(2, 2)) == 4){
+            state = true;
+          }
+            Assert.IsTrue(state, "State is True");
+            
+        }
     }
-}
 }
 
 
