@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace MyMath{
+namespace  MyMath
+{
     public class Operations
     {
 
