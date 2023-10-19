@@ -1,4 +1,6 @@
-namespace Text.Tests;
+using Text;
+using System.Collections;
+
 
 public class Tests
 {
@@ -8,8 +10,17 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TestRepeating()
     {
-        Assert.Pass();
+        int value = Str.UniqueChar("shoes");
+        Assert.That(value, Is.EqualTo(-1));
     }
+    
+    [Test]
+    public void TestRepeatingNon()
+    {
+        int value = Str.UniqueChar("shoe");
+        Assert.That(value, Is.EqualTo(0));
+    }
+    
 }
