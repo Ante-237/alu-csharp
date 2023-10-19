@@ -37,6 +37,12 @@ public class Tests
     }
 
     [Test]
+    public void TestNegativeOutput(){
+         int[,] outputTest = new int[2,2] {{-2, -4}, {-8, -12}};
+          Assert.That(outputTest, Is.EqualTo(Matrix.Divide(TestShow, -2)));
+    }
+
+    [Test]
     public void TestMatrixNull()
     {
         int[,] NullOutput = null;
