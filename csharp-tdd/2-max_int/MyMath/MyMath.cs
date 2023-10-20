@@ -4,6 +4,11 @@ namespace MyMath{
 
     public class Operations{
 
+        /// <summary>
+        /// Returns largest integer of a list
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public static int Max(List<int> nums)
         {
             int listLength = nums.Count;

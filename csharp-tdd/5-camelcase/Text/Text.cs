@@ -6,6 +6,11 @@ namespace Text
 {
     public class Str
     {
+        /// <summary>
+        /// Returns number of words in a string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static int CamelCase(string? s)
         {
 

@@ -7,6 +7,11 @@ namespace Text
     
     public class Str
     {
+        /// <summary>
+        /// Determines if string is palidrome
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static bool IsPalindrome(string s)
         {
             if (s == string.Empty || s == " ")
