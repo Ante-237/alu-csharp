@@ -27,15 +27,6 @@ Console.WriteLine(sb.ToString());
 
 class Obj {
 
-    static void Main(string[] args)
-    {
-        var num = 10;
-        var myList = new List<int>();
-
-        Obj.Print(num);
-        Console.WriteLine("-----------------");
-        Obj.Print(myList);
-    }
 
     public static void Print(object myObj){
 
