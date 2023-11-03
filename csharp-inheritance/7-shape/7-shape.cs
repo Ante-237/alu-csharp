@@ -36,7 +36,7 @@ public class Rectangle : Shape{
         get { return width ;}
         set { 
             if( value < 0){
-            throw new ArgumentException("Width must be greater than or equal to 0");
+            throw new ArgumentException("Width must be greater than or equal to 0.");
         }
         width = value;
         }
