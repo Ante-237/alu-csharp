@@ -1,7 +1,9 @@
 ﻿using System;
 
 
-
+/// <summary>
+/// Base class for all shapes to be represented. 
+/// </summary>
 public class Shape{
 
     
@@ -17,6 +19,9 @@ public class Shape{
 }
 
 
+/// <summary>
+/// Rectangle class inherits from Shapes class
+/// </summary>
 public class Rectangle : Shape{
 
 // width of rectangle
