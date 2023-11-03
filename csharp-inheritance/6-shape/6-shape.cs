@@ -19,7 +19,9 @@ public class Shape{
 
 public class Rectangle : Shape{
 
+// width of rectangle
     private int width;
+    // height of rectangle
     private int height;
 
 /// <summary>
