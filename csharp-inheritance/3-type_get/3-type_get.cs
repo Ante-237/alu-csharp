@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Text;
 
 
 /*
@@ -26,6 +25,16 @@ Console.WriteLine(sb.ToString());
 
 
 class Obj {
+
+    static void Main(string[] args)
+    {
+        var num = 10;
+        var myList = new List<int>();
+
+        Obj.Print(num);
+        Console.WriteLine("-----------------");
+        Obj.Print(myList);
+    }
 
     public static void Print(object myObj){
 
@@ -54,11 +63,17 @@ class Obj {
         Console.WriteLine($"{t.Name} Methods:");
 
         foreach(MethodInfo m in pMethod){
-            Console.WriteLine(m.Name);
+            if(m.DeclaringType == myObj.GetType()){
+                 Console.WriteLine(m.Name);
+            }
+            // Console.WriteLine(m.Name);
+          
            // sb.Append("\n" + m.Name);
         }
 
         // Console.WriteLine(sb.ToString());
+
+        
 
     }
 }
