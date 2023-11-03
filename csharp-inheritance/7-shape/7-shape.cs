@@ -17,6 +17,9 @@ class Program
 }
 
 
+/// <summary>
+/// Shape class is based class for all shapes
+/// </summary>
 public class Shape{
 
 
@@ -31,10 +34,14 @@ public class Shape{
 
 }
 
-
+/// <summary>
+/// Class Rectangle which inherits from Shape
+/// </summary>
 public class Rectangle : Shape{
 
+// width of rectangle
     private int width;
+    // height of rectangle
     private int height;
 
 /// <summary>
@@ -65,11 +72,18 @@ public class Rectangle : Shape{
 
     }
 
-
+/// <summary>
+/// Calculates area of rectangle
+/// </summary>
+/// <returns> Area of rectangle</returns>
     public override int Area(){
         return height * width;
     }
 
+/// <summary>
+/// Local representation of the Rectangle in string format
+/// </summary>
+/// <returns>String</returns>
     public override string ToString(){
 
         return $"[Rectangle] {width} / {height}";
