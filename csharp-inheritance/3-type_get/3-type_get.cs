@@ -27,26 +27,31 @@ Console.WriteLine(sb.ToString());
 
 class Obj {
 
-
     public static void Print(object myObj){
 
         TypeInfo t =  myObj.GetType().GetTypeInfo();
-        IEnumerable<PropertyInfo> pList  = t.DeclaredProperties;
-        Console.WriteLine(pList.First().DeclaringType.Name + " Properties:");
+        // IEnumerable<PropertyInfo> pList  = t.DeclaredProperties;
+        IEnumerable<PropertyInfo> pList = t.GetProperties();
+        //Console.WriteLine(pList.First().DeclaringType.Name + " Properties:");
+        Console.WriteLine($"{t.Name} Properties:");
  
-        StringBuilder sb = new StringBuilder();
+        //StringBuilder sb = new StringBuilder();
         //sb.Append(pList.First().DeclaringType.Name + " Properties:");
 
 
 
         foreach(PropertyInfo p in pList){
+         //if(p.Attributes == None){
+
+          //  }
             Console.WriteLine(p.Name);
            // sb.Append("\n" + p.Name);
         }
 
-        IEnumerable<MethodInfo> pMethod = t.DeclaredMethods;
-           Console.WriteLine(pMethod.First().DeclaringType.Name + " Methods:");
-          //sb.Append(pMethod.First().DeclaringType.Name + " Method:");
+        IEnumerable<MethodInfo> pMethod = t.GetMethods();
+        // Console.WriteLine(pMethod.First().DeclaringType.Name + " Methods:");
+        // sb.Append(pMethod.First().DeclaringType.Name + " Method:");
+        Console.WriteLine($"{t.Name} Methods:");
 
         foreach(MethodInfo m in pMethod){
             Console.WriteLine(m.Name);
