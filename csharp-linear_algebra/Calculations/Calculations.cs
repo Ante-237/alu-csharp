@@ -8,13 +8,13 @@ class Program{
         Console.WriteLine(" Length  :" + Pythagoras(64, 121));
     }
 
-    public static float Pythagoras(int a, int b){
+    public static double Pythagoras(int a, int b){
 
-        int aS = (int) Math.Pow(a, 2);
-        int bS = (int) Math.Pow(b, 2);
+        int AB = (int) Math.Pow(a, 2);
+        int BC = (int) Math.Pow(b, 2);
 
-        int result = (int) Math.Sqrt(aS + bS);
+        double AC = Math.Round(Math.Sqrt(AB + BC), 2);
 
-        return result;
+        return AC;
     }
 }
