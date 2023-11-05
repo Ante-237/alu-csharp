@@ -1,22 +1,5 @@
 ﻿using System;
 
-
-
-class Program{
-
-    public static void Main(){
-
-        double[,] startedPoint = { {1, 2}, { 3, 4}};
-        double[,] result = MatrixMath.Rotate2D(startedPoint, -1.57);
-        
-        for(int i = 0; i < 2 ; i++){
-            for(int j = 0; j < 2; j++){
-                Console.WriteLine(result[i,j]);
-            }
-        }
-
-    }
-}
 class MatrixMath{
     public static double[,] Rotate2D(double[,] matrix, double angle){
         double[,] rotationMatrix = {
