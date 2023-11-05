@@ -20,7 +20,7 @@ class MatrixMath{
                     result[row, col] = 0;
                     for (int k = 0; k < rows; k++)
                     {
-                        result[row, col] += rotationMatrix[row, k] * matrix[k, col];
+                        result[row, col] += Math.Round(rotationMatrix[row, k] * matrix[k, col]);
                     }
                 }
             }
