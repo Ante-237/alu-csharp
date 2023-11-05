@@ -10,7 +10,7 @@ class MatrixMath{
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
-        if(rows == cols){
+        if(rows == cols && rows == 2){
              double[,] result = new double[rows,cols];
 
          for (int col = 0; col < cols; col++)
@@ -25,12 +25,11 @@ class MatrixMath{
                 }
             }
 
-        return result;
+            return result;
         }
 
-          return new double[,]{{-1}};
+        return new double[,]{{-1}};
        
     }
-
   
 }
