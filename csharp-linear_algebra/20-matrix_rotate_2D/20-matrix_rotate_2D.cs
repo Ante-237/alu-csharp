@@ -8,7 +8,12 @@ class Program{
 
         double[,] startedPoint = { {1, 2}, { 3, 4}};
         double[,] result = MatrixMath.Rotate2D(startedPoint, -1.57);
-        Console.WriteLine(result[0,0] + ": " + result[0,1] + ": " + result[1,0] + " : " + result[1,1]);
+        
+        for(int i = 0; i < 2 ; i++){
+            for(int j = 0; j < 2; j++){
+                Console.WriteLine(result[i,j]);
+            }
+        }
 
     }
 }
@@ -22,7 +27,8 @@ class MatrixMath{
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
-        double[,] result = new double[rows,cols];
+        if(rows == cols){
+             double[,] result = new double[rows,cols];
 
          for (int col = 0; col < cols; col++)
             {
@@ -37,7 +43,11 @@ class MatrixMath{
             }
 
         return result;
+        }
+
+          return new double[,]{{-1}};
+       
     }
 
-    return new double[,]{{-1}};
+  
 }
