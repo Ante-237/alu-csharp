@@ -38,4 +38,6 @@ class MatrixMath{
 
         return result;
     }
+
+    return new double[,]{{-1}};
 }
