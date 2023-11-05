@@ -11,7 +11,7 @@ class MatrixMath{
 
         double[,] result = new double[rowA, colB];
        
-        if(colsA == rowsB){
+        if(colA == rowB){
             for(int i = 0; i < rowA; i++){
 
                 for(int j = 0; j < colB; j++){
