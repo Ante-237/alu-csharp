@@ -4,7 +4,7 @@ class Program{
 
     public static void Main(string[] args){
 
-        Console.WriteLine("VectorSum : " + SumVectors(8, -11, -4, 9)[0] + " : "  + SumVectors(8,-11,-4,9)[1]);
+        Console.WriteLine("VectorSum : " + SumVectors3D(13,-2,0,-3,23,50)[0] + " : "  + SumVectors3D(13,-2,0,-3,23,50)[1]  + " : " + SumVectors3D(13,-2,0,-3,23,50)[2] );
     }
 
     // calculating pythagoras length
@@ -28,6 +28,14 @@ class Program{
         double[] result = new double[2];
         result[0] = x1 + x2;
         result[1] = y1 + y2;
+        return result;
+    }
+
+    public static double[] SumVectors3D(double x1, double y1, double z1, double x2, double y2, double z2){
+        double[] result = new double[3];
+        result[0] = x1 + x2;
+        result[1] = y1 + y2;
+        result[2] = z1 + z2;
         return result;
     }
 
