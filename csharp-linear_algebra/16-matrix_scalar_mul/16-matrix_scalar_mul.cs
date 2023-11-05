@@ -16,6 +16,6 @@ class MatrixMath{
             return result;
         }
 
-        return new double[]{{-1}};
+        return new double[,]{{-1}};
     }
 }
