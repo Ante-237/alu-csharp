@@ -17,12 +17,12 @@ class MatrixMath{
                 for(int j = 0; j < colB; j++){
                   
                   for(int u = 0; u < colA; u++){
-                        resultMatrix[i,j] += matrix1[i, u] * matrix2[u, j];
+                        result[i,j] += matrix1[i, u] * matrix2[u, j];
                   }
                 }
             }
 
-            return matrix1;
+            return result;
         }
 
         return new double[,]{{-1}};
