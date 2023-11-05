@@ -4,10 +4,10 @@ class Program{
 
     public static void Main(string[] args){
 
-        Console.WriteLine("working class");
-        Console.WriteLine(" Length  :" + Pythagoras(64, 121));
+        Console.WriteLine("Magnitude : " + Pythagoras(3,9));
     }
 
+    // calculating pythagoras length
     public static double Pythagoras(int a, int b){
 
         int AB = (int) Math.Pow(a, 2);
@@ -17,4 +17,6 @@ class Program{
 
         return AC;
     }
+
+  
 }
