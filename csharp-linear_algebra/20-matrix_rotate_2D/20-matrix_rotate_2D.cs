@@ -11,7 +11,8 @@ class MatrixMath{
         int cols = matrix.GetLength(1);
 
         if(rows == cols && rows == 2 && cols == 2){
-             double[,] result = new double[rows,cols];
+         
+         double[,] result = new double[rows,cols];
 
          for (int col = 0; col < cols; col++)
             {
@@ -20,7 +21,7 @@ class MatrixMath{
                     result[row, col] = 0;
                     for (int k = 0; k < rows; k++)
                     {
-                        result[row, col] += Math.Round(rotationMatrix[row, k] * matrix[k, col], 2);
+                        result[row, col] += Math.Round(matrix[k, col] * rotationMatrix[row, k] , 2);
                     }
                 }
             }
