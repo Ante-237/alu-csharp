@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections;
 
-/*
+
 class Program{
     public static void Main(string[] arg){
        //  double[,] testMatrix = {{5, 0, 02}, {1,-8,1}, {3, 2, 0}};
        //  double[,] testMatrix = {{1.2, -0.42}, {0.67, 2}};
-       double[,] testMatrix = {{1.2, 0.35, -0.42}, {0, -8, 6.21}, {3.89, -4, 0.67}};
+       double[,] testMatrix = {{11, 9, 7}, {2, 13, 1}, {4, 0, 17}};
+      // double[,] testMatrix = {{1.2, 0.35, -0.42}, {0, -8, 6.21}, {3.89, -4, 0.67}};
         Console.WriteLine(" " + MatrixMath.Determinant(testMatrix));
     }
 }
-*/
+
 
 
 class MatrixMath{
