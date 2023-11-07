@@ -13,7 +13,7 @@ class MatrixMath{
             return new double[,]{
                 { matrix[1,1] * determinant, -(matrix[0,1] * determinant)},
                 {-(matrix[1,0] * determinant), (matrix[0,0] * determinant)}
-            }
+            };
        }
 
        return new double[,]{{-1}};
