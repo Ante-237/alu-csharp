@@ -3,8 +3,8 @@
 class MatrixMath{
     public static double[,] Rotate2D(double[,] matrix, double angle){
         double[,] rotationMatrix = {
-            { Math.Cos(angle), -Math.Sin(angle)},
-            { Math.Sin(angle), Math.Cos(angle)}
+            { Math.Cos(angle), Math.Sin(angle)},
+            { -Math.Sin(angle), Math.Cos(angle)}
         };
 
         int rows = matrix.GetLength(0);
