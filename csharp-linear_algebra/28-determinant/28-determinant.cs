@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-
+/*
 class Program{
     public static void Main(string[] arg){
        //  double[,] testMatrix = {{5, 0, 02}, {1,-8,1}, {3, 2, 0}};
@@ -10,7 +10,7 @@ class Program{
         Console.WriteLine(" " + MatrixMath.Determinant(testMatrix));
     }
 }
-
+*/
 
 
 class MatrixMath{
