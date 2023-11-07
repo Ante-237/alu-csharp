@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections;
 
-/*
+
 class Program{
     public static void Main(string[] arg){
-        double[,] testMatrix = {{5, 0, 02}, {1,-8,1}, {3, 2, 0}};
+       //  double[,] testMatrix = {{5, 0, 02}, {1,-8,1}, {3, 2, 0}};
+       //  double[,] testMatrix = {{1.2, -0.42}, {0.67, 2}};
+       double[,] testMatrix = {{1.2, 0.35, -0.42}, {0, -8, 6.21}, {3.89, -4, 0.67}};
         Console.WriteLine(" " + MatrixMath.Determinant(testMatrix));
     }
 }
-*/
+
 
 
 class MatrixMath{
 
     public static double Determinant(double[,] matrix){
 
-        if(matrix.GetLength(0) == 2 || matrix.GetLength(1) == 3){
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
 
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
+        if((rows == 3 && cols == 3 ) || (rows == 2 && cols 2)){
 
             if(rows == 2){
-                return ((matrix[0,0] * matrix[1,1]) -  (matrix[0,1] * matrix[1,0]));
+                return Math.Round(((matrix[0,0] * matrix[1,1]) -  (matrix[0,1] * matrix[1,0])),2);
             }
 
             if(rows == 3){
