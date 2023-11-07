@@ -4,11 +4,12 @@ using System.Collections;
 /*
 class Program{
     public static void Main(string[] arg){
-        double[,] testMatrix = {{3,-2}, {7,4}};
+        double[,] testMatrix = {{5, 0, 02}, {1,-8,1}, {3, 2, 0}};
         Console.WriteLine(" " + MatrixMath.Determinant(testMatrix));
     }
 }
 */
+
 
 class MatrixMath{
 
@@ -28,7 +29,7 @@ class MatrixMath{
                 double y = matrix[0,1] * ((matrix[1,0] * matrix[2,2]) - (matrix[2,0] * matrix[1,2]));
                 double z = matrix[0,2] * ((matrix[1,0] * matrix[2,1]) - (matrix[2,0] * matrix[1,1]));
 
-                return ( x - y - z);
+                return Math.Round((x - y - z),2);
             }
         }
 
