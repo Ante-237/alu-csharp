@@ -13,6 +13,6 @@ class VectorMath{
             return new double[]{ x, y, z};
         }
 
-        return -1;
+        return new double[]{-1};
     }
 }
