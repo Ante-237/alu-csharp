@@ -1,4 +1,14 @@
 ﻿using System;
+using System.Collections;
+
+/*
+class Program{
+    public static void Main(string[] arg){
+        double[,] testMatrix = {{3,-2}, {7,4}};
+        Console.WriteLine(" " + MatrixMath.Determinant(testMatrix));
+    }
+}
+*/
 
 class MatrixMath{
 
@@ -10,13 +20,13 @@ class MatrixMath{
             int cols = matrix.GetLength(1);
 
             if(rows == 2){
-                return ((matrix[0,0] * matrix[1,1]) - matrix([0,1] * matrix[1,0]));
+                return ((matrix[0,0] * matrix[1,1]) -  (matrix[0,1] * matrix[1,0]));
             }
 
             if(rows == 3){
-                int x = matrix[0,0] * ((matrix[1,1] * matrix[2,2]) - (matrix[2,1] * matrix[1,2]));
-                int y = matrix[0,1] * ((matrix[1,0] * matrix[2,2]) - (matrix[2,0] * matrix[1,2]));
-                int z = matrix[0,2] * ((matrix[1,0] * matrix[2,1]) - (matrix[2,0] * matrix[1,1]));
+                double x = matrix[0,0] * ((matrix[1,1] * matrix[2,2]) - (matrix[2,1] * matrix[1,2]));
+                double y = matrix[0,1] * ((matrix[1,0] * matrix[2,2]) - (matrix[2,0] * matrix[1,2]));
+                double z = matrix[0,2] * ((matrix[1,0] * matrix[2,1]) - (matrix[2,0] * matrix[1,1]));
 
                 return ( x - y - z);
             }
