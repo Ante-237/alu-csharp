@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class MatrixTransformation
+public class MatrixMath
 {
 
     public static double[,] Shear2D(double[,] matrix, char direction, double factor){
