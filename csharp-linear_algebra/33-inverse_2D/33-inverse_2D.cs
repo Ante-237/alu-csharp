@@ -4,7 +4,7 @@
 class MatrixMath{
 
     public static double[,] Inverse2D(double[,] matrix){
-        
+
          if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
         {
             return new double[,]{ {-1}};
@@ -26,8 +26,8 @@ class MatrixMath{
 
         return new double[,]
         {
-            { invDet * d, -invDet * b },
-            { -invDet * c, invDet * a }
+            { Math.Round(invDet * d, 2), Math.Round(-invDet * b, 2) },
+            { Math.Round(-invDet * c, 2), Math.Round(invDet * a , 2)}
         };
     }
 
