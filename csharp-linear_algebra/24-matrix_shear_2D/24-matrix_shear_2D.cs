@@ -13,6 +13,12 @@ public class MatrixTransformation
             return new double[,]{ {-1}};
         }
 
+
+        if(direction != "x"  || direction != "y"){
+            return new double[,] { { -1}};
+        }
+        
+
         // create matrix 
         if(direction == "x"){
             mMatrix = new double[,]{ 
@@ -39,7 +45,7 @@ public class MatrixTransformation
         }
 
         return result;
-        
+
     }
 
     /*
