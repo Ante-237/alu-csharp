@@ -10,20 +10,20 @@ public class MatrixMath
         double[,] mMatrix = new double[rows, cols];
 
         if(rows != 2 || cols != 2){
-            Console.WriteLine(" Is a 2 by 2 matrix");
+            
             return new double[,]{ {-1}};
         }
 
 
         if(direction != 'x' && direction != 'y'){
-            Console.WriteLine(" Is not x or y");
+           
             return new double[,] { { -1}};
         }
         
 
         // create matrix 
         if(direction == 'x'){
-            Console.WriteLine("X running");
+            
          mMatrix = new double[,]{ 
                 { 1, 0},
                 { factor, 1}
