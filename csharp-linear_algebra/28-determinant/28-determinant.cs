@@ -17,6 +17,38 @@ class Program{
 class MatrixMath{
 
     public static double Determinant(double[,] matrix){
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        if (rows != cols)
+        {
+            return -1; // Not a square matrix
+        }
+
+        if (rows == 2) // 2x2 matrix
+        {
+            return matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
+        }
+        else if (rows == 3) // 3x3 matrix
+        {
+            double determinant = 0;
+            determinant += matrix[0, 0] * (matrix[1, 1] * matrix[2, 2] - matrix[1, 2] * matrix[2, 1]);
+            determinant -= matrix[0, 1] * (matrix[1, 0] * matrix[2, 2] - matrix[1, 2] * matrix[2, 0]);
+            determinant += Math.Abs(matrix[0, 2]) * (matrix[1, 0] * matrix[2, 1] - matrix[1, 1] * matrix[2, 0]);
+            return determinant;
+        }
+        else
+        {
+            return -1; 
+        }
+
+    }
+
+
+
+    /*
+
+    public static double Determinant(double[,] matrix){
 
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
@@ -38,4 +70,5 @@ class MatrixMath{
 
         return -1;
     }
+    */
 }
