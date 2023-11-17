@@ -2,6 +2,47 @@
 
 public class MatrixTransformation
 {
+
+    public static double[,] Shear2D(double[,] matrix, char direction, double factor){
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+        double[,] mMatrix;
+        double[,] result = new double[rows, cols];
+
+        if(rows != 2 || cols != 2){
+            return new double[,]{ {-1}};
+        }
+
+        // create matrix 
+        if(direction == "x"){
+            mMatrix = new double[,]{ 
+                { 1, 0},
+                { factor, 1}
+        };
+        }
+
+        if(direction == "y"){
+            mMatrix = new double[,]{
+                { 1, factor},
+                { 0, 1}
+            };
+        }
+
+        for(int i = 0; i < rows; i++){
+
+                for(int j = 0; j < cols; j++){
+                  
+                  for(int u = 0; u < 2; u++){
+                        result[i,j] += matrix[i, u] * mMatrix[u, j];
+                }
+            }
+        }
+
+        return result;
+        
+    }
+
+    /*
     // Applies a shear along the X-axis to a 2D matrix of points.
     public static double[,] ShearX(double[,] matrix, double shx)
     {
@@ -21,6 +62,8 @@ public class MatrixTransformation
         }
 
         return result;
+
+
     }
 
     // Applies a shear along the Y-axis to a 2D matrix of points.
@@ -42,9 +85,11 @@ public class MatrixTransformation
         }
 
         return result;
-    }
+    }*/
 }
 
+
+/*
 class Program
 {
     static void Main()
@@ -82,3 +127,4 @@ class Program
         }
     }
 }
+*/
