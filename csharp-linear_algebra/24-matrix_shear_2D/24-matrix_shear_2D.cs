@@ -14,20 +14,20 @@ public class MatrixTransformation
         }
 
 
-        if(direction != "x"  || direction != "y"){
+        if(direction != 'x'  || direction != 'y'){
             return new double[,] { { -1}};
         }
         
 
         // create matrix 
-        if(direction == "x"){
+        if(direction == 'x'){
             mMatrix = new double[,]{ 
                 { 1, 0},
                 { factor, 1}
         };
         }
 
-        if(direction == "y"){
+        if(direction == 'y'){
             mMatrix = new double[,]{
                 { 1, factor},
                 { 0, 1}
@@ -39,7 +39,7 @@ public class MatrixTransformation
                 for(int j = 0; j < cols; j++){
                   
                   for(int u = 0; u < 2; u++){
-                        result[i,j] += matrix[i, u] * mMatrix[u, j];
+                        result[i,j] += Math.Round(matrix[i, u] * mMatrix[u, j], 2);
                 }
             }
         }
