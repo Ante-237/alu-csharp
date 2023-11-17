@@ -6,7 +6,7 @@ public class MatrixTransformation
     public static double[,] Shear2D(double[,] matrix, char direction, double factor){
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
-        double[,] mMatrix;
+        double[,] mMatrix = new double[,]{{-1}};
         double[,] result = new double[rows, cols];
 
         if(rows != 2 || cols != 2){
